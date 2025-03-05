@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage Example</title>
+</head>
+<body>
+    <h2>SessionStorage Example</h2>
+    
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="saveUser()">Save User</button>
+    <button onclick="getUser()">Get User</button>
+    <button onclick="removeUser()">Remove User</button>
+    <button onclick="clearStorage()">Clear Storage</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Save data to sessionStorage
+        function saveUser() {
+            let username = document.getElementById("username").value;
+            if (username) {
+                sessionStorage.setItem("user", username);
+                alert("User saved!");
+            } else {
+                alert("Please enter a name.");
+            }
+        }
+
+        // Retrieve data from sessionStorage
+        function getUser() {
+            let storedUser = sessionStorage.getItem("user");
+            if (storedUser) {
+                document.getElementById("output").textContent = "Stored User: " + storedUser;
+            } else {
+                alert("No user found in sessionStorage.");
+            }
+        }
+
+        // Remove specific data from sessionStorage
+        function removeUser() {
+            sessionStorage.removeItem("user");
+            alert("User removed!");
+            document.getElementById("output").textContent = "";
+        }
+
+        // Clear all data from sessionStorage
+        function clearStorage() {
+            sessionStorage.clear();
+            alert("SessionStorage cleared!");
+            document.getElementById("output").textContent = "";
+        }
+    </script>
+</body>
+</html>
