@@ -1,0 +1,1 @@
+// functionality for the weather app = make comments at every important part of the code
