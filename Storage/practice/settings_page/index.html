@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>Settings Page</h1>
+    </header>
+    <main>
+        <section class="theme-section">
+            <label for="theme">Choose a theme: </label>
+            <select name="theme" id="theme" title="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </section>
+
+        <section class="font-section">
+            <label for="font-size">Choose a font size for the text: </label>
+            <select name="font-size" id="font-size" title="font-size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </section>
+
+        <button class="save">Save Settings</button>
+    </main>
+    <script src="main.js"></script>
 </body>
 </html>
