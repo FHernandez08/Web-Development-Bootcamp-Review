@@ -1,0 +1,23 @@
+header {
+    text-align: center;
+}
+
+h2 {
+    margin-left: 100px;
+}
+
+.posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#post-left {
+    background-color: lightblue;
+    padding: 10px;
+}
+
+#post-right {
+    background-color: lightgreen;
+    padding: 10px;
+}

@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+}
+
+ul {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+@media screen and (max-width: 400px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+    }
+}
