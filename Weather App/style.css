@@ -1,5 +1,7 @@
 body {
-
+    text-align: center;
+    background-color: lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -18,4 +20,25 @@ header {
     align-items: center;
     gap: 16px;
 
+    padding: 20px;
+    margin: 20px;
+}
+
+#search-bar {
+    height: 25px;
+}
+
+label {
+    font-size: 20px;
+    color: white;
+}
+
+#search-button {
+    border: none;
+    background-color: green;
+    color: white;
+
+    height: 25px;
+    border-radius: 5px;
+    width: 100px;
 }
