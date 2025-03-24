@@ -9,6 +9,9 @@ searchBtn.addEventListener("click", function() {
         console.log("Please enter a city name.");
         return;
     }
+    else {
+        localStorage.setItem("User searched city", cityInput);
+    }
 
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(cityInput)}&appid=${weatherApi}&units=imperial`)
