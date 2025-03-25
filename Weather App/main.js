@@ -37,9 +37,9 @@ searchBtn.addEventListener("click", function() {
 
         currWeatherDiv.innerHTML = `
         <h2 id="current-city">${cityName}</h2>
-        <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="image for the current weather icon"/>
-        <p id="weather-description">${weatherDescription}</p>
+        <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="image for the current weather icon" id="current-weather-icon"/>
         <p id="current-temp">${currTemp}°F</p>
+        <p id="weather-description">${weatherDescription}</p>
         <p id="curr-weather-feel">Feels like: ${currFeelLike}°F</p> 
         `;
 
