@@ -1,3 +1,5 @@
+// part of the router layer
+
 const express = require("express");
 const workoutController = require("../../controllers/workoutController");
 
