@@ -1,12 +1,15 @@
 // entry point for the API
 
 const express = require("express");
-const v1Router = require("./v1/routes");
+const bodyParser = require("body-parser");
+
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// retrieves JSON data inside controllers
+app.use(bodyParser.json());
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
