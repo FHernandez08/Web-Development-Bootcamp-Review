@@ -8,7 +8,7 @@ const recordController = require("../../controllers/recordController");
 const router = express.Router();
 const cache = apicache.middleware;
 
-// routes for different options to choose
+// routes for different options of HTTP methods
 router.get("/", cache("2 minutes"), workoutController.getAllWorkouts);
 
 router.get("/", workoutController.getAllWorkouts);
