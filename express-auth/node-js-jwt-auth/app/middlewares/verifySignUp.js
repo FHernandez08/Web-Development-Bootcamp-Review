@@ -24,7 +24,7 @@ export const checkDuplicateUsernameOrEmail = async (req, res, next) => {
     }
 
     catch (error) {
-        req.status(500).json({ message: error.message });
+        res.status(500).json({ message: error.message });
     }
 };
 

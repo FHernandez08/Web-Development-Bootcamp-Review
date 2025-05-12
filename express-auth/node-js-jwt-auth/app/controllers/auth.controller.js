@@ -1,6 +1,6 @@
 import db from "../models/index.js";
 import jwt from "jsonwebtoken";
-import bcrypt from "../config/auth.config.js";
+import bcrypt from "bcryptjs";
 import authConfig from "../config/auth.config.js";
 
 const { user: User, role: Role } = db;
@@ -11,7 +11,7 @@ export const signup = async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 8);
 
-        const userRole = await Role.findOne({ where: { name: "user "} });
+        const userRole = await Role.findOne({ where: { name: "user" } });
 
         const user = await User.create({
             username,
