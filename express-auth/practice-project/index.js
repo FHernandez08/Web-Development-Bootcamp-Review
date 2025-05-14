@@ -2,8 +2,11 @@ require('dotenv').config();
 const express = require('express');
 const jwt = require('jsonwebtoken');
 
+const app = express();
+app.use(express.json());
+
 function authenticateToken(req, res, next) {
-    const authHeader = req.headers['authentication'];
+    const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
 
     if (!token) {
@@ -17,9 +20,6 @@ function authenticateToken(req, res, next) {
         next();
     })
 }
-
-const app = express();
-app.use(express.json());
 
 app.get('/dashboard', authenticateToken, (req, res) => {
     res.json({ message: `Welcome ${req.user.username}, this is your dashboard!` });
